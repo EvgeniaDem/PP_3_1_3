@@ -50,13 +50,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 // указываем URL при удачном логауте
                 .logoutSuccessUrl("/login?logout")
-                //выклчаем кроссдоменную секьюрность (на этапе обучения неважна)
+                //выклчаем кроссдоменную секьюрность
                 .and().csrf().disable();
 
         http
-                // делаем страницу регистрации недоступной для авторизированных пользователей
+                //вызов метода означает, что все постутающие запросы должны проходить авторизацию
                 .authorizeRequests()
-                //страницы аутентификаци доступна всем
+                //страницы аутентификаци доступна любому пользователю
                 .antMatchers("/login").anonymous()
                 .antMatchers("/init").anonymous()
                 // защищенные URL
