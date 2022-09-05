@@ -1,6 +1,5 @@
-package bootstrap.config;
+package bootstrap.configs;
 
-import bootstrap.config.handler.LoginSuccessHandler;
 import bootstrap.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -14,7 +13,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private UserService userService;

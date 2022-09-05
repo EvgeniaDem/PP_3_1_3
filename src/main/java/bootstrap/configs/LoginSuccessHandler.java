@@ -1,4 +1,4 @@
-package bootstrap.config.handler;
+package bootstrap.configs;
 
 import bootstrap.model.Role;
 import bootstrap.model.User;
@@ -15,18 +15,18 @@ import java.io.IOException;
 public class LoginSuccessHandler implements AuthenticationSuccessHandler {
 
     @Override
-    public void onAuthenticationSuccess(HttpServletRequest httpServletRequest,
-                                        HttpServletResponse httpServletResponse,
+    public void onAuthenticationSuccess(HttpServletRequest request,
+                                        HttpServletResponse response,
                                         Authentication authentication) throws IOException, ServletException {
 
         User user = (User) authentication.getPrincipal();
 
         if (user.getRoles().contains(new Role("ADMIN"))) {
-            httpServletResponse.sendRedirect("/");
+            response.sendRedirect("/");
         } else if (user.getRoles().contains(new Role("USER"))) {
-            httpServletResponse.sendRedirect("/");
+            response.sendRedirect("/");
         } else {
-            httpServletResponse.sendRedirect("/login");
+            response.sendRedirect("/login");
         }
     }
 }
