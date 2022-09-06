@@ -116,7 +116,7 @@
                                                               class="text-center" style="width: 300px; margin: auto">
                                                             <div class="form-group">
                                                                 <label th:for="'id' + ${user.id}"><b>ID</b></label>
-                                                                <input type="text" th:id="'id' + ${user.id}" name="id"
+                                                                <input disabled type="text" th:id="'id' + ${user.id}" name="id"
                                                                        th:value="${user.id}" class="form-control"
                                                                        readonly="readonly"/>
                                                             </div>
@@ -216,7 +216,7 @@
                                                               class="text-center" style="width: 300px; margin: auto">
                                                             <div class="form-group">
                                                                 <label th:for="'id' + ${user.id}"><b>ID</b></label>
-                                                                <input type="text" th:id="'id' + ${user.id}" name="id"
+                                                                <input disabled type="text" th:id="'id' + ${user.id}" name="id"
                                                                        th:value="${user.id}" class="form-control"
                                                                        readonly="readonly"/>
                                                             </div>
@@ -224,28 +224,28 @@
                                                             <div class="form-group">
                                                                 <label th:for="'firstName' + ${user.id}"><b>First
                                                                     name</b></label>
-                                                                <input type="text" th:id="'firstName' + ${user.id}"
+                                                                <input disabled type="text" th:id="'firstName' + ${user.id}"
                                                                        name="firstName" th:value="${user.firstName}"
                                                                        class="form-control" readonly="readonly"/>
                                                             </div>
 
                                                             <div class="form-group">
                                                                 <label th:for="'lastName' + ${user.id}"><b>Last name</b></label>
-                                                                <input type="text" th:id="'lastName' + ${user.id}"
+                                                                <input disabled type="text" th:id="'lastName' + ${user.id}"
                                                                        name="lastName" th:value="${user.lastName}"
                                                                        class="form-control" readonly="readonly"/>
                                                             </div>
 
                                                             <div class="form-group">
                                                                 <label th:for="'age' + ${user.id}"><b>Age</b></label>
-                                                                <input type="text" th:id="'age' + ${user.id}" name="age"
+                                                                <input disabled type="text" th:id="'age' + ${user.id}" name="age"
                                                                        th:value="${user.age}" class="form-control"
                                                                        readonly="readonly"/>
                                                             </div>
 
                                                             <div class="form-group">
                                                                 <label th:for="'email' + ${user.id}"><b>Email</b></label>
-                                                                <input type="text" th:id="'email' + ${user.id}"
+                                                                <input disabled type="text" th:id="'email' + ${user.id}"
                                                                        name="email" th:value="${user.email}"
                                                                        class="form-control" readonly="readonly"/>
                                                             </div>
